@@ -12,14 +12,6 @@
 
   --selected: hsl(220, 98%, 61%); /*selected*/
 
-  --background: hsl(0, 0%, 98%); /*background */
-  --card-background: hsl(0, 0%, 100%); /*card background*/
-  --border: hsl(235, 32%, 92%); /* border*/
-  --desactive: hsl(233, 11%, 84%); /*font desative footer*/
-  --font-footer: hsl(240, 4%, 56%); /*font footer (all) input*/
-  --font-primary: hsl(235, 19%, 35%); /*font*/
-}
-.dark-mode{
   --background: hsl(235, 21%, 11%);
   --card-background: hsl(235, 24%, 19%);
   --font-primary: hsl(234, 39%, 85%);
@@ -27,10 +19,21 @@
   --desactive: hsl(234, 11%, 52%);
   --font-footer: hsl(233, 14%, 35%);
   --border: hsl(237, 14%, 26%);
+
+
+}
+.dark-mode{
+  --background: hsl(0, 0%, 98%); /*background */
+  --card-background: hsl(0, 0%, 100%); /*card background*/
+  --border: hsl(235, 32%, 92%); /* border*/
+  --desactive: hsl(233, 11%, 84%); /*font desative footer*/
+  --font-footer: hsl(240, 4%, 56%); /*font footer (all) input*/
+  --font-primary: hsl(235, 19%, 35%); /*font*/
 }
 body{
   background-color: var(--background);
   font-family: "Josefin Sans", serif;
+  transition: background-color 0.3s ease;
 }
 body.dark-mode{
   background-color: var(--background);
