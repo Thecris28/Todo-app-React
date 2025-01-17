@@ -1,3 +1,5 @@
+
+
 .image {
     background-image: url('assets/images/bg-desktop-dark.jpg');
     width: 100%;
@@ -83,7 +85,7 @@ h1 {
 }
 
 .input-todo::placeholder{
-    color: var(--font-footer);
+    color: var(--desactive);
     font-weight: 600;
 }
 
@@ -201,7 +203,7 @@ input[type="checkbox"]:hover {
 }
 
 .todo-item-togle-presed{
-  color: var(--desactive);
+  color: var(--font-footer);
   margin-right: auto;
   padding-left: 12px;
   text-decoration: line-through;
@@ -216,10 +218,6 @@ input[type="checkbox"]:hover {
     transition: opacity 0.7s;
 }
 
-/* .todo-item:hover button{
-    opacity: 1;
-
-} */
 
 .todo-item button img{
     width: 15px;
@@ -233,12 +231,12 @@ input[type="checkbox"]:hover {
     justify-content: space-between;
     padding: 16px 15px;
     border-radius: 7px;
-    color: var(--font-footer);
+    color: var(--desactive);
     transition: background-color 0.3s ease;
 }
 /* Efecto al pasar el cursor | Clear complete */
 .todo-footer span{
-  color: var(--font-footer);
+  color: var(--desactive);
   cursor: pointer;
 }
 
@@ -278,7 +276,7 @@ input[type="checkbox"]:hover {
     color: var(--selected);
 }
 .footer-item-no-selected{
-    color: var(--font-footer);
+    color: var(--desactive);
 }
 .reorder{
   font-size: 15px;
@@ -322,6 +320,16 @@ input[type="checkbox"]:hover {
     height: 60px;
     align-items: center;
     font-size: 16px;
+  }
+  .todo-item button{
+    opacity: 0;
+  }
+  .todo-item:hover button{
+    opacity: 1;
+  }
+  .todo-item button img{
+    width: 20px;
+    height: 20px;
   }
 
 }

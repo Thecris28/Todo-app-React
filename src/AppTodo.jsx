@@ -6,7 +6,6 @@ import imgLight from './assets/images/icon-sun.svg'
 
 import { TodoList } from './components/TodoList'
 import { AddTodo } from './components/AddTodo'
-
 import { todoReducer } from './todoReducer'
 
 const Filters = {
@@ -19,6 +18,16 @@ const initialState = [
     {
         id: crypto.randomUUID(),
         title: 'Complete online JavaScript course',
+        completed: false
+    },
+    {
+        id: crypto.randomUUID(),
+        title: 'Jog around the park 3x',
+        completed: false
+    },
+    {
+        id: crypto.randomUUID(),
+        title: '10 minutes meditation',
         completed: false
     }
 ];
