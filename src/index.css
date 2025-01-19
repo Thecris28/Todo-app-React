@@ -1,4 +1,5 @@
 
+@import url('./styles/styles.css');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
 
 
@@ -26,8 +27,8 @@
   --background: hsl(0, 0%, 98%); /*background */
   --card-background: hsl(0, 0%, 100%); /*card background*/
   --border: hsl(235, 32%, 92%); /* border*/
-  --desactive: hsl(233, 11%, 84%); /*font desative footer*/
-  --font-footer: hsl(240, 4%, 56%); /*font footer (all) input*/
+  --desactive: hsl(240, 4%, 56%); /*font desative footer*/
+  --font-footer: hsl(233, 11%, 84%); /*font footer (all) input*/
   --font-primary: hsl(235, 19%, 35%); /*font*/
 }
 body{
@@ -38,4 +39,36 @@ body{
 body.dark-mode{
   background-color: var(--background);
   
+}
+
+
+.image {
+  background-image: url('assets/images/bg-desktop-dark.jpg');
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  z-index: -1;
+  transition: background-image 0.3s ease-out;
+}
+
+@media (max-width: 767px) {
+  .image {
+    height: 200px;
+    background-image: url('assets/images/bg-mobile-dark.jpg');
+    transition: background-image 0.3s ease-out;
+  }
+}
+
+/* Para tema oscuro */
+body.dark-mode .image {
+  background-image: url('assets/images/bg-desktop-light.jpg');
+}
+
+@media (max-width: 767px) {
+  body.dark-mode .image {
+    background-image: url('assets/images/bg-mobile-light.jpg');
+  }
 }
