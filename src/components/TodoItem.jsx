@@ -10,7 +10,7 @@ export const TodoItem = ({ todo, onDelete, onToggle }) => {
   };
 
   return (
-    <li id={`todo-${todo.id}`} className="todo-item">
+    <div id={`todo-${todo.id}`} className="todo-item">
       <input
         name="checkbox"
         checked={todo.completed === true}
@@ -22,6 +22,6 @@ export const TodoItem = ({ todo, onDelete, onToggle }) => {
       <button onClick={handleDelete}>
         <img src={imgDelete} alt="" />
       </button>
-    </li>
+    </div>
   )
 }

@@ -1,5 +1,6 @@
 
 import { useEffect, useReducer, useState } from 'react'
+import './styles/styles.css'
 
 import { TodoList } from './components/TodoList'
 import { AddTodo } from './components/AddTodo'
@@ -53,6 +54,13 @@ export const AppTodo = () => {
         });
     };
 
+    const handleReorder = (values) => {
+        dispatch({
+            type: 'reorder',
+            payload: values
+        });
+    }
+
     const filterTodos = (todos, filter) => {
         switch (filter) {
             case Filters.active:
@@ -77,8 +85,13 @@ export const AppTodo = () => {
             <main className='app-container'>
                 <Header />
                 <AddTodo newTodo={handleNewTodo} />
+                
                 <ul>
-                    <TodoList todo={filteredTodos} onDelete={handleDeleteTodo} onToggle={handleToggleTodo} />
+                <TodoList 
+                todos={filteredTodos} 
+                onDelete={handleDeleteTodo} 
+                onToggle={handleToggleTodo} 
+                onReorder={handleReorder}/>
                     <li className='todo-footer'>
                         <p>{todosPending} items left</p>
                         <div className="footer-item-block">

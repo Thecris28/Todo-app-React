@@ -19,6 +19,9 @@ export const todoReducer = (initialState = [] , action) => {
         case 'delete-all':
             return initialState.filter(todo => !todo.completed)
         
+        case 'reorder':
+            return action.payload
+        
         default:
             return initialState
     }
