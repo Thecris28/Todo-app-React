@@ -28,7 +28,7 @@
   --card-background: hsl(0, 0%, 100%); /*card background*/
   --border: hsl(235, 32%, 92%); /* border*/
   --desactive: hsl(240, 4%, 56%); /*font desative footer*/
-  --font-footer: hsl(233, 11%, 84%); /*font footer (all) input*/
+  --font-footer: hsl(236, 9%, 61%); /*font footer (all) input*/
   --font-primary: hsl(235, 19%, 35%); /*font*/
 }
 body{

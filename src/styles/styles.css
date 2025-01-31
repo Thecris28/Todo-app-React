@@ -87,8 +87,11 @@ ul{
 }
 .todo-item-reorder{
     cursor: pointer;
+    border-bottom: var(--border) solid 1px;
     list-style: none;
     border-radius: 7px;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease, border 0.3s ease;
 
 }
 @keyframes fadeIn {
@@ -199,6 +202,8 @@ input[type="checkbox"]:hover {
     height: 15px;
 }
 
+/* footer section*/
+
 .todo-footer{
     font-size: 15px;
     background-color: var(--card-background);
@@ -211,7 +216,7 @@ input[type="checkbox"]:hover {
 }
 /* Efecto al pasar el cursor | Clear complete */
 .todo-footer span{
-  color: var(--desactive);
+  color: var(--font-footer);
   cursor: pointer;
 }
 
@@ -220,6 +225,7 @@ input[type="checkbox"]:hover {
 }
 .todo-footer p{
   min-width: 82px;
+  color: var(--font-footer);
 }
 
 .footer-item{
@@ -253,10 +259,11 @@ input[type="checkbox"]:hover {
 .footer-item-no-selected{
     color: var(--desactive);
 }
+
 .reorder{
-  font-size: 15px;
+  font-size: 16px;
   color: var(--font-footer);
-  margin-top: 50px;
+  margin: 50px 0;
   text-align: center;
 }
 .footer-item-block{
